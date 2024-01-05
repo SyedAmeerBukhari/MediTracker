@@ -29,106 +29,140 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            loginLogoPictureBox = new PictureBox();
+            loginButton = new Button();
+            userNameTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            loginUserNameLable = new Label();
+            loginPaswordLable = new Label();
+            loginHeaderLable = new Label();
+            RegisterNowLinkLabel = new LinkLabel();
+            questionLable = new Label();
+            ((System.ComponentModel.ISupportInitialize)loginLogoPictureBox).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(22, 194, 213);
+            panel1.BackColor = Color.FromArgb(52, 151, 219);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(221, 337);
+            panel1.Size = new Size(399, 418);
             panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // loginLogoPictureBox
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Image = Properties.Resources.MediTracker_Logo__removebg_preview;
-            pictureBox1.Location = new Point(227, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(340, 85);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            loginLogoPictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginLogoPictureBox.BackgroundImageLayout = ImageLayout.None;
+            loginLogoPictureBox.Image = Properties.Resources.MediTracker_Logo__removebg_preview1;
+            loginLogoPictureBox.Location = new Point(405, 12);
+            loginLogoPictureBox.Name = "loginLogoPictureBox";
+            loginLogoPictureBox.Size = new Size(399, 98);
+            loginLogoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            loginLogoPictureBox.TabIndex = 2;
+            loginLogoPictureBox.TabStop = false;
             // 
-            // button1
+            // loginButton
             // 
-            button1.Location = new Point(359, 302);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            loginButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginButton.Location = new Point(549, 272);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new Size(79, 25);
+            loginButton.TabIndex = 3;
+            loginButton.Text = "Login";
+            loginButton.UseVisualStyleBackColor = true;
+            loginButton.Click += loginButton_Click;
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            textBox1.Location = new Point(278, 174);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 23);
-            textBox1.TabIndex = 4;
+            userNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            userNameTextBox.Location = new Point(458, 174);
+            userNameTextBox.Name = "userNameTextBox";
+            userNameTextBox.Size = new Size(228, 23);
+            userNameTextBox.TabIndex = 4;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            textBox2.Location = new Point(278, 233);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(223, 23);
-            textBox2.TabIndex = 5;
+            passwordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            passwordTextBox.Location = new Point(458, 233);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(228, 23);
+            passwordTextBox.TabIndex = 5;
             // 
-            // label1
+            // loginUserNameLable
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(278, 156);
-            label1.Name = "label1";
-            label1.Size = new Size(94, 15);
-            label1.TabIndex = 6;
-            label1.Text = "Username / Emil";
+            loginUserNameLable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginUserNameLable.AutoSize = true;
+            loginUserNameLable.Location = new Point(458, 156);
+            loginUserNameLable.Name = "loginUserNameLable";
+            loginUserNameLable.Size = new Size(60, 15);
+            loginUserNameLable.TabIndex = 6;
+            loginUserNameLable.Text = "Username";
             // 
-            // label2
+            // loginPaswordLable
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(278, 215);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Pasword";
+            loginPaswordLable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginPaswordLable.AutoSize = true;
+            loginPaswordLable.Location = new Point(458, 215);
+            loginPaswordLable.Name = "loginPaswordLable";
+            loginPaswordLable.Size = new Size(52, 15);
+            loginPaswordLable.TabIndex = 7;
+            loginPaswordLable.Text = "Pasword";
             // 
-            // label3
+            // loginHeaderLable
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(382, 114);
-            label3.Name = "label3";
-            label3.Size = new Size(37, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Login";
+            loginHeaderLable.Anchor = AnchorStyles.None;
+            loginHeaderLable.AutoSize = true;
+            loginHeaderLable.Location = new Point(559, 113);
+            loginHeaderLable.Name = "loginHeaderLable";
+            loginHeaderLable.Size = new Size(37, 15);
+            loginHeaderLable.TabIndex = 8;
+            loginHeaderLable.Text = "Login";
+            // 
+            // RegisterNowLinkLabel
+            // 
+            RegisterNowLinkLabel.ActiveLinkColor = Color.Red;
+            RegisterNowLinkLabel.Anchor = AnchorStyles.None;
+            RegisterNowLinkLabel.AutoSize = true;
+            RegisterNowLinkLabel.Location = new Point(584, 310);
+            RegisterNowLinkLabel.Name = "RegisterNowLinkLabel";
+            RegisterNowLinkLabel.Size = new Size(77, 15);
+            RegisterNowLinkLabel.TabIndex = 9;
+            RegisterNowLinkLabel.TabStop = true;
+            RegisterNowLinkLabel.Text = "Register Now";
+            RegisterNowLinkLabel.LinkClicked += RegisterNowLinkLabel_LinkClicked;
+            // 
+            // questionLable
+            // 
+            questionLable.Anchor = AnchorStyles.None;
+            questionLable.AutoSize = true;
+            questionLable.Location = new Point(454, 311);
+            questionLable.Name = "questionLable";
+            questionLable.Size = new Size(126, 15);
+            questionLable.TabIndex = 10;
+            questionLable.Text = "Don't have a Account?";
             // 
             // loginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(137, 222, 226);
-            ClientSize = new Size(579, 337);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            BackColor = Color.Azure;
+            ClientSize = new Size(816, 418);
+            Controls.Add(loginButton);
+            Controls.Add(questionLable);
+            Controls.Add(RegisterNowLinkLabel);
+            Controls.Add(loginHeaderLable);
+            Controls.Add(loginPaswordLable);
+            Controls.Add(loginUserNameLable);
+            Controls.Add(passwordTextBox);
+            Controls.Add(userNameTextBox);
+            Controls.Add(loginLogoPictureBox);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "loginPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)loginLogoPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,12 +170,14 @@
         #endregion
 
         private Panel panel1;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private PictureBox loginLogoPictureBox;
+        private Button loginButton;
+        private TextBox userNameTextBox;
+        private TextBox passwordTextBox;
+        private Label loginUserNameLable;
+        private Label loginPaswordLable;
+        private Label loginHeaderLable;
+        private LinkLabel RegisterNowLinkLabel;
+        private Label questionLable;
     }
 }

@@ -8,7 +8,7 @@ namespace MediTracker
         {
             InitializeComponent();
         }
-        
+
         private void patientDataEntryTabControl_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -41,6 +41,11 @@ namespace MediTracker
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+        }
+
+        private void PatientDataEntryForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
