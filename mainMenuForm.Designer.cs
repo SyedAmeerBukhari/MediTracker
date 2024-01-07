@@ -58,7 +58,6 @@
             exisitingPatientdataGridView.Name = "exisitingPatientdataGridView";
             exisitingPatientdataGridView.Size = new Size(812, 223);
             exisitingPatientdataGridView.TabIndex = 1;
-            exisitingPatientdataGridView.CellContentClick += exisitingPatientdataGridView_CellContentClick;
             // 
             // patentIdColumnReadTextBox
             // 

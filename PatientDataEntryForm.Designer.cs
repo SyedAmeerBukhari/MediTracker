@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            patientDataEntryTabControl = new TabControl();
+            patientDataEntryTabControl = new TabControls.DotNetBarTabControl();
             patientBiographyTabPage = new TabPage();
             PatientOccupationTextBox = new TextBox();
             patientOccupationLabel = new Label();
@@ -63,6 +63,10 @@
             AllergiesLable = new Label();
             labHistoryTabPage = new TabPage();
             radiologyTabPage = new TabPage();
+            richTextBox1 = new RichTextBox();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
             comboBox1 = new ComboBox();
@@ -71,10 +75,6 @@
             referTabPage = new TabPage();
             cunsultentOpinionTabPage = new TabPage();
             caseSummaryTabPage = new TabPage();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            richTextBox1 = new RichTextBox();
             patientDataEntryTabControl.SuspendLayout();
             patientBiographyTabPage.SuspendLayout();
             medicalHistoryTabPage.SuspendLayout();
@@ -93,10 +93,9 @@
             patientDataEntryTabControl.Controls.Add(referTabPage);
             patientDataEntryTabControl.Controls.Add(cunsultentOpinionTabPage);
             patientDataEntryTabControl.Controls.Add(caseSummaryTabPage);
-            patientDataEntryTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
             patientDataEntryTabControl.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            patientDataEntryTabControl.ItemSize = new Size(35, 120);
-            patientDataEntryTabControl.Location = new Point(-1, 96);
+            patientDataEntryTabControl.ItemSize = new Size(44, 136);
+            patientDataEntryTabControl.Location = new Point(-1, 65);
             patientDataEntryTabControl.Margin = new Padding(0);
             patientDataEntryTabControl.Multiline = true;
             patientDataEntryTabControl.Name = "patientDataEntryTabControl";
@@ -104,11 +103,10 @@
             patientDataEntryTabControl.RightToLeft = RightToLeft.No;
             patientDataEntryTabControl.SelectedIndex = 0;
             patientDataEntryTabControl.ShowToolTips = true;
-            patientDataEntryTabControl.Size = new Size(847, 434);
+            patientDataEntryTabControl.Size = new Size(850, 466);
             patientDataEntryTabControl.SizeMode = TabSizeMode.Fixed;
             patientDataEntryTabControl.TabIndex = 0;
             patientDataEntryTabControl.TabStop = false;
-            patientDataEntryTabControl.DrawItem += patientDataEntryTabControl_DrawItem;
             // 
             // patientBiographyTabPage
             // 
@@ -144,10 +142,10 @@
             patientBiographyTabPage.Controls.Add(patientFirstNameLabel);
             patientBiographyTabPage.ForeColor = Color.Black;
             patientBiographyTabPage.ImeMode = ImeMode.NoControl;
-            patientBiographyTabPage.Location = new Point(124, 4);
+            patientBiographyTabPage.Location = new Point(140, 4);
             patientBiographyTabPage.Name = "patientBiographyTabPage";
             patientBiographyTabPage.Padding = new Padding(3);
-            patientBiographyTabPage.Size = new Size(719, 426);
+            patientBiographyTabPage.Size = new Size(706, 458);
             patientBiographyTabPage.TabIndex = 0;
             patientBiographyTabPage.Text = "Patient Biography";
             // 
@@ -399,10 +397,10 @@
             // 
             medicalHistoryTabPage.BackColor = Color.LightSteelBlue;
             medicalHistoryTabPage.Controls.Add(AllergiesLable);
-            medicalHistoryTabPage.Location = new Point(124, 4);
+            medicalHistoryTabPage.Location = new Point(140, 4);
             medicalHistoryTabPage.Name = "medicalHistoryTabPage";
             medicalHistoryTabPage.Padding = new Padding(3);
-            medicalHistoryTabPage.Size = new Size(719, 426);
+            medicalHistoryTabPage.Size = new Size(706, 427);
             medicalHistoryTabPage.TabIndex = 1;
             medicalHistoryTabPage.Text = "Medical History";
             // 
@@ -417,9 +415,9 @@
             // 
             // labHistoryTabPage
             // 
-            labHistoryTabPage.Location = new Point(124, 4);
+            labHistoryTabPage.Location = new Point(140, 4);
             labHistoryTabPage.Name = "labHistoryTabPage";
-            labHistoryTabPage.Size = new Size(719, 426);
+            labHistoryTabPage.Size = new Size(706, 427);
             labHistoryTabPage.TabIndex = 2;
             labHistoryTabPage.Text = "Lab History";
             labHistoryTabPage.UseVisualStyleBackColor = true;
@@ -435,11 +433,44 @@
             radiologyTabPage.Controls.Add(label2);
             radiologyTabPage.Controls.Add(comboBox1);
             radiologyTabPage.Controls.Add(label1);
-            radiologyTabPage.Location = new Point(124, 4);
+            radiologyTabPage.Location = new Point(140, 4);
             radiologyTabPage.Name = "radiologyTabPage";
-            radiologyTabPage.Size = new Size(719, 426);
+            radiologyTabPage.Size = new Size(706, 427);
             radiologyTabPage.TabIndex = 3;
             radiologyTabPage.Text = "Radiology";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(444, 78);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(254, 82);
+            richTextBox1.TabIndex = 7;
+            richTextBox1.Text = "";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(444, 58);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 17);
+            label4.TabIndex = 6;
+            label4.Text = "Findings";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(50, 238);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(50, 218);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 17);
+            label3.TabIndex = 4;
+            label3.Text = "Radiologist";
             // 
             // dateTimePicker1
             // 
@@ -477,72 +508,39 @@
             // 
             // proceduresTabPage
             // 
-            proceduresTabPage.Location = new Point(124, 4);
+            proceduresTabPage.Location = new Point(140, 4);
             proceduresTabPage.Name = "proceduresTabPage";
-            proceduresTabPage.Size = new Size(719, 426);
+            proceduresTabPage.Size = new Size(706, 427);
             proceduresTabPage.TabIndex = 4;
             proceduresTabPage.Text = "Procedures / Surgury";
             proceduresTabPage.UseVisualStyleBackColor = true;
             // 
             // referTabPage
             // 
-            referTabPage.Location = new Point(124, 4);
+            referTabPage.Location = new Point(140, 4);
             referTabPage.Name = "referTabPage";
-            referTabPage.Size = new Size(719, 426);
+            referTabPage.Size = new Size(706, 427);
             referTabPage.TabIndex = 5;
             referTabPage.Text = "Refer";
             referTabPage.UseVisualStyleBackColor = true;
             // 
             // cunsultentOpinionTabPage
             // 
-            cunsultentOpinionTabPage.Location = new Point(124, 4);
+            cunsultentOpinionTabPage.Location = new Point(140, 4);
             cunsultentOpinionTabPage.Name = "cunsultentOpinionTabPage";
-            cunsultentOpinionTabPage.Size = new Size(719, 426);
+            cunsultentOpinionTabPage.Size = new Size(706, 427);
             cunsultentOpinionTabPage.TabIndex = 6;
             cunsultentOpinionTabPage.Text = "Cunsultent Opinion";
             cunsultentOpinionTabPage.UseVisualStyleBackColor = true;
             // 
             // caseSummaryTabPage
             // 
-            caseSummaryTabPage.Location = new Point(124, 4);
+            caseSummaryTabPage.Location = new Point(140, 4);
             caseSummaryTabPage.Name = "caseSummaryTabPage";
-            caseSummaryTabPage.Size = new Size(719, 426);
+            caseSummaryTabPage.Size = new Size(706, 427);
             caseSummaryTabPage.TabIndex = 7;
             caseSummaryTabPage.Text = "Case Summary";
             caseSummaryTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(50, 218);
-            label3.Name = "label3";
-            label3.Size = new Size(74, 17);
-            label3.TabIndex = 4;
-            label3.Text = "Radiologist";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(50, 238);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(444, 58);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 17);
-            label4.TabIndex = 6;
-            label4.Text = "Findings";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(444, 78);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(254, 82);
-            richTextBox1.TabIndex = 7;
-            richTextBox1.Text = "";
             // 
             // PatientDataEntryForm
             // 
@@ -564,7 +562,7 @@
 
         #endregion
 
-        private TabControl patientDataEntryTabControl;
+        private TabControls.DotNetBarTabControl patientDataEntryTabControl;
         private TabPage patientBiographyTabPage;
         private TabPage medicalHistoryTabPage;
         private TabPage labHistoryTabPage;

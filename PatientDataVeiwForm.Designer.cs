@@ -1,6 +1,6 @@
 ﻿namespace MediTracker
 {
-    partial class PatentDataViewForm
+    partial class PatientDataViewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
+            patientDataViewTabControl = new TabControls.DotNetBarTabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
-            tabControl1.SuspendLayout();
+            patientDataViewTabControl.SuspendLayout();
             SuspendLayout();
             // 
-            // tabControl1
+            // patientDataViewTabControl
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(165, 152);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(200, 100);
-            tabControl1.TabIndex = 0;
+            patientDataViewTabControl.Alignment = TabAlignment.Left;
+            patientDataViewTabControl.Controls.Add(tabPage1);
+            patientDataViewTabControl.Controls.Add(tabPage2);
+            patientDataViewTabControl.Dock = DockStyle.Bottom;
+            patientDataViewTabControl.ItemSize = new Size(44, 136);
+            patientDataViewTabControl.Location = new Point(0, 120);
+            patientDataViewTabControl.Multiline = true;
+            patientDataViewTabControl.Name = "patientDataViewTabControl";
+            patientDataViewTabControl.SelectedIndex = 0;
+            patientDataViewTabControl.Size = new Size(800, 330);
+            patientDataViewTabControl.SizeMode = TabSizeMode.Fixed;
+            patientDataViewTabControl.TabIndex = 0;
             // 
             // tabPage1
             // 
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(140, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(192, 72);
+            tabPage1.Size = new Size(656, 322);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Location = new Point(140, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(192, 72);
+            tabPage2.Size = new Size(656, 442);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -69,16 +74,17 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tabControl1);
+            Controls.Add(patientDataViewTabControl);
             Name = "PatentDataViewForm";
             Text = "PatentDataViewForm";
-            tabControl1.ResumeLayout(false);
+            Load += PatientDataViewForm_Load;
+            patientDataViewTabControl.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TabControl tabControl1;
+        private TabControls.DotNetBarTabControl patientDataViewTabControl;
         private TabPage tabPage1;
         private TabPage tabPage2;
     }

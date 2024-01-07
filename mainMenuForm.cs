@@ -21,7 +21,8 @@ namespace MediTracker
 
         private void exisitingPatientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            PatientDataViewForm patientDataViewForm = new PatientDataViewForm();
+            patientDataViewForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

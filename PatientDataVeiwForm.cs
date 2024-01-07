@@ -12,11 +12,16 @@ using System.Windows.Forms;
 namespace MediTracker
 #pragma warning restore VSSpell001 // Spell Check
 {
-    public partial class PatentDataViewForm : Form
+    public partial class PatientDataViewForm : Form
     {
-        public PatentDataViewForm()
+        public PatientDataViewForm()
         {
             InitializeComponent();
+        }
+
+        private void PatientDataViewForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
