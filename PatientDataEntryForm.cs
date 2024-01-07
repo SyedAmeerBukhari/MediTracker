@@ -1,3 +1,5 @@
+// Ignore Spelling: Medi
+
 using System.Windows.Forms;
 
 namespace MediTracker
@@ -41,11 +43,6 @@ namespace MediTracker
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
-        }
-
-        private void PatientDataEntryForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

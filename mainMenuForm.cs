@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Ignore Spelling: Medi
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,23 @@ namespace MediTracker
         public mainMenuForm()
         {
             InitializeComponent();
+        }
+
+        private void exisitingPatientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PatientDataEntryForm patientDataEntryForm = new PatientDataEntryForm();
+            patientDataEntryForm.Show();
+        }
+
+        private void newPatentEntryButton_Click(object sender, EventArgs e)
+        {
+            PatientDataEntryForm patientDataEntryForm = new PatientDataEntryForm();
+            patientDataEntryForm.Show();
         }
     }
 }

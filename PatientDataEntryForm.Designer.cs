@@ -30,43 +30,55 @@
         {
             patientDataEntryTabControl = new TabControl();
             patientBiographyTabPage = new TabPage();
-            label5 = new Label();
-            textBox11 = new TextBox();
-            button1 = new Button();
-            textBox9 = new TextBox();
-            label13 = new Label();
-            textBox10 = new TextBox();
-            label14 = new Label();
-            textBox7 = new TextBox();
-            label10 = new Label();
-            textBox8 = new TextBox();
-            label11 = new Label();
-            label12 = new Label();
-            textBox6 = new TextBox();
-            label9 = new Label();
-            textBox5 = new TextBox();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            textBox4 = new TextBox();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
+            PatientOccupationTextBox = new TextBox();
+            patientOccupationLabel = new Label();
+            patientBloodGroupComboBox = new ComboBox();
+            maskedTextBox1 = new MaskedTextBox();
+            patientEmergencyContacNumberMaskedTextBox = new MaskedTextBox();
+            contactNumberMaskedTextBox = new MaskedTextBox();
+            patientCNICMaskedTextBox = new MaskedTextBox();
+            CNICLabel = new Label();
+            dataSaveButton = new Button();
+            patientEmergencyContactRelationTextBox = new TextBox();
+            patientEmergencyContactRelationLabel = new Label();
+            patientEmailAdderssTextBox = new TextBox();
+            patientEmailLabel = new Label();
+            patientEmergencyContactNumberLabel = new Label();
+            patientEmergencyContactNameTextBox = new TextBox();
+            patientEmergencyContactNameLabel = new Label();
+            patientEmergencyContactInformationLabel = new Label();
+            patientContactNumberLabel = new Label();
+            patientAdderssTextBox = new TextBox();
+            patientAdderssLabel = new Label();
+            contactInformationLabel = new Label();
+            patientBloodGroupLabel = new Label();
+            patientAgeLabel = new Label();
+            patientGenderComboBox = new ComboBox();
+            patientLastNameTextBox = new TextBox();
+            patientLastNameLabel = new Label();
+            patientGenderLabel = new Label();
+            patientFirstNameTextBox = new TextBox();
+            patientFirstNameLabel = new Label();
             medicalHistoryTabPage = new TabPage();
+            AllergiesLable = new Label();
             labHistoryTabPage = new TabPage();
-            radiologyTabPage1 = new TabPage();
+            radiologyTabPage = new TabPage();
+            dateTimePicker1 = new DateTimePicker();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
             proceduresTabPage = new TabPage();
             referTabPage = new TabPage();
             cunsultentOpinionTabPage = new TabPage();
             caseSummaryTabPage = new TabPage();
-            menuStrip1 = new MenuStrip();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            label4 = new Label();
+            richTextBox1 = new RichTextBox();
             patientDataEntryTabControl.SuspendLayout();
             patientBiographyTabPage.SuspendLayout();
+            medicalHistoryTabPage.SuspendLayout();
+            radiologyTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // patientDataEntryTabControl
@@ -76,7 +88,7 @@
             patientDataEntryTabControl.Controls.Add(patientBiographyTabPage);
             patientDataEntryTabControl.Controls.Add(medicalHistoryTabPage);
             patientDataEntryTabControl.Controls.Add(labHistoryTabPage);
-            patientDataEntryTabControl.Controls.Add(radiologyTabPage1);
+            patientDataEntryTabControl.Controls.Add(radiologyTabPage);
             patientDataEntryTabControl.Controls.Add(proceduresTabPage);
             patientDataEntryTabControl.Controls.Add(referTabPage);
             patientDataEntryTabControl.Controls.Add(cunsultentOpinionTabPage);
@@ -101,33 +113,35 @@
             // patientBiographyTabPage
             // 
             patientBiographyTabPage.BackColor = Color.LightSteelBlue;
-            patientBiographyTabPage.Controls.Add(label5);
-            patientBiographyTabPage.Controls.Add(textBox11);
-            patientBiographyTabPage.Controls.Add(button1);
-            patientBiographyTabPage.Controls.Add(textBox9);
-            patientBiographyTabPage.Controls.Add(label13);
-            patientBiographyTabPage.Controls.Add(textBox10);
-            patientBiographyTabPage.Controls.Add(label14);
-            patientBiographyTabPage.Controls.Add(textBox7);
-            patientBiographyTabPage.Controls.Add(label10);
-            patientBiographyTabPage.Controls.Add(textBox8);
-            patientBiographyTabPage.Controls.Add(label11);
-            patientBiographyTabPage.Controls.Add(label12);
-            patientBiographyTabPage.Controls.Add(textBox6);
-            patientBiographyTabPage.Controls.Add(label9);
-            patientBiographyTabPage.Controls.Add(textBox5);
-            patientBiographyTabPage.Controls.Add(label8);
-            patientBiographyTabPage.Controls.Add(label7);
-            patientBiographyTabPage.Controls.Add(label6);
-            patientBiographyTabPage.Controls.Add(textBox1);
-            patientBiographyTabPage.Controls.Add(label1);
-            patientBiographyTabPage.Controls.Add(comboBox1);
-            patientBiographyTabPage.Controls.Add(textBox4);
-            patientBiographyTabPage.Controls.Add(label4);
-            patientBiographyTabPage.Controls.Add(textBox3);
-            patientBiographyTabPage.Controls.Add(label3);
-            patientBiographyTabPage.Controls.Add(textBox2);
-            patientBiographyTabPage.Controls.Add(label2);
+            patientBiographyTabPage.Controls.Add(PatientOccupationTextBox);
+            patientBiographyTabPage.Controls.Add(patientOccupationLabel);
+            patientBiographyTabPage.Controls.Add(patientBloodGroupComboBox);
+            patientBiographyTabPage.Controls.Add(maskedTextBox1);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContacNumberMaskedTextBox);
+            patientBiographyTabPage.Controls.Add(contactNumberMaskedTextBox);
+            patientBiographyTabPage.Controls.Add(patientCNICMaskedTextBox);
+            patientBiographyTabPage.Controls.Add(CNICLabel);
+            patientBiographyTabPage.Controls.Add(dataSaveButton);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactRelationTextBox);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactRelationLabel);
+            patientBiographyTabPage.Controls.Add(patientEmailAdderssTextBox);
+            patientBiographyTabPage.Controls.Add(patientEmailLabel);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactNumberLabel);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactNameTextBox);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactNameLabel);
+            patientBiographyTabPage.Controls.Add(patientEmergencyContactInformationLabel);
+            patientBiographyTabPage.Controls.Add(patientContactNumberLabel);
+            patientBiographyTabPage.Controls.Add(patientAdderssTextBox);
+            patientBiographyTabPage.Controls.Add(patientAdderssLabel);
+            patientBiographyTabPage.Controls.Add(contactInformationLabel);
+            patientBiographyTabPage.Controls.Add(patientBloodGroupLabel);
+            patientBiographyTabPage.Controls.Add(patientAgeLabel);
+            patientBiographyTabPage.Controls.Add(patientGenderComboBox);
+            patientBiographyTabPage.Controls.Add(patientLastNameTextBox);
+            patientBiographyTabPage.Controls.Add(patientLastNameLabel);
+            patientBiographyTabPage.Controls.Add(patientGenderLabel);
+            patientBiographyTabPage.Controls.Add(patientFirstNameTextBox);
+            patientBiographyTabPage.Controls.Add(patientFirstNameLabel);
             patientBiographyTabPage.ForeColor = Color.Black;
             patientBiographyTabPage.ImeMode = ImeMode.NoControl;
             patientBiographyTabPage.Location = new Point(124, 4);
@@ -137,238 +151,269 @@
             patientBiographyTabPage.TabIndex = 0;
             patientBiographyTabPage.Text = "Patient Biography";
             // 
-            // label5
+            // PatientOccupationTextBox
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(275, 86);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 17);
-            label5.TabIndex = 30;
-            label5.Text = "CNIC";
+            PatientOccupationTextBox.Location = new Point(433, 106);
+            PatientOccupationTextBox.Name = "PatientOccupationTextBox";
+            PatientOccupationTextBox.Size = new Size(100, 23);
+            PatientOccupationTextBox.TabIndex = 41;
             // 
-            // textBox11
+            // patientOccupationLabel
             // 
-            textBox11.Location = new Point(275, 104);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 29;
+            patientOccupationLabel.AutoSize = true;
+            patientOccupationLabel.Location = new Point(433, 86);
+            patientOccupationLabel.Name = "patientOccupationLabel";
+            patientOccupationLabel.Size = new Size(74, 17);
+            patientOccupationLabel.TabIndex = 40;
+            patientOccupationLabel.Text = "Occupation";
             // 
-            // button1
+            // patientBloodGroupComboBox
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(491, 309);
-            button1.Name = "button1";
-            button1.Size = new Size(111, 44);
-            button1.TabIndex = 28;
-            button1.Text = "Save ";
-            button1.UseVisualStyleBackColor = false;
+            patientBloodGroupComboBox.FormattingEnabled = true;
+            patientBloodGroupComboBox.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
+            patientBloodGroupComboBox.Location = new Point(148, 106);
+            patientBloodGroupComboBox.Name = "patientBloodGroupComboBox";
+            patientBloodGroupComboBox.Size = new Size(121, 25);
+            patientBloodGroupComboBox.TabIndex = 39;
             // 
-            // textBox9
+            // maskedTextBox1
             // 
-            textBox9.Location = new Point(275, 320);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 27;
+            maskedTextBox1.Location = new Point(38, 106);
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(100, 23);
+            maskedTextBox1.TabIndex = 38;
             // 
-            // label13
+            // patientEmergencyContacNumberMaskedTextBox
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(275, 302);
-            label13.Name = "label13";
-            label13.Size = new Size(79, 17);
-            label13.TabIndex = 26;
-            label13.Text = "Relationship";
+            patientEmergencyContacNumberMaskedTextBox.Location = new Point(162, 320);
+            patientEmergencyContacNumberMaskedTextBox.Mask = "0000-0000";
+            patientEmergencyContacNumberMaskedTextBox.Name = "patientEmergencyContacNumberMaskedTextBox";
+            patientEmergencyContacNumberMaskedTextBox.Size = new Size(100, 23);
+            patientEmergencyContacNumberMaskedTextBox.TabIndex = 37;
             // 
-            // textBox10
+            // contactNumberMaskedTextBox
             // 
-            textBox10.Location = new Point(275, 219);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 25;
+            contactNumberMaskedTextBox.Location = new Point(158, 221);
+            contactNumberMaskedTextBox.Mask = "0000-0000";
+            contactNumberMaskedTextBox.Name = "contactNumberMaskedTextBox";
+            contactNumberMaskedTextBox.Size = new Size(100, 23);
+            contactNumberMaskedTextBox.TabIndex = 36;
             // 
-            // label14
+            // patientCNICMaskedTextBox
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(275, 201);
-            label14.Name = "label14";
-            label14.Size = new Size(91, 17);
-            label14.TabIndex = 24;
-            label14.Text = "Email Adderss";
+            patientCNICMaskedTextBox.Location = new Point(288, 104);
+            patientCNICMaskedTextBox.Mask = "00000-0000000-0";
+            patientCNICMaskedTextBox.Name = "patientCNICMaskedTextBox";
+            patientCNICMaskedTextBox.Size = new Size(100, 23);
+            patientCNICMaskedTextBox.TabIndex = 34;
             // 
-            // textBox7
+            // CNICLabel
             // 
-            textBox7.Location = new Point(158, 320);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 23;
+            CNICLabel.AutoSize = true;
+            CNICLabel.Location = new Point(288, 86);
+            CNICLabel.Name = "CNICLabel";
+            CNICLabel.Size = new Size(38, 17);
+            CNICLabel.TabIndex = 30;
+            CNICLabel.Text = "CNIC";
             // 
-            // label10
+            // dataSaveButton
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(158, 302);
-            label10.Name = "label10";
-            label10.Size = new Size(104, 17);
-            label10.TabIndex = 22;
-            label10.Text = "Contact Number";
+            dataSaveButton.BackColor = SystemColors.ButtonFace;
+            dataSaveButton.FlatStyle = FlatStyle.Flat;
+            dataSaveButton.Location = new Point(491, 309);
+            dataSaveButton.Name = "dataSaveButton";
+            dataSaveButton.Size = new Size(111, 44);
+            dataSaveButton.TabIndex = 28;
+            dataSaveButton.Text = "Save ";
+            dataSaveButton.UseVisualStyleBackColor = false;
             // 
-            // textBox8
+            // patientEmergencyContactRelationTextBox
             // 
-            textBox8.Location = new Point(38, 320);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 21;
+            patientEmergencyContactRelationTextBox.Location = new Point(275, 320);
+            patientEmergencyContactRelationTextBox.Name = "patientEmergencyContactRelationTextBox";
+            patientEmergencyContactRelationTextBox.Size = new Size(100, 23);
+            patientEmergencyContactRelationTextBox.TabIndex = 27;
             // 
-            // label11
+            // patientEmergencyContactRelationLabel
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(38, 302);
-            label11.Name = "label11";
-            label11.Size = new Size(43, 17);
-            label11.TabIndex = 20;
-            label11.Text = "Name";
+            patientEmergencyContactRelationLabel.AutoSize = true;
+            patientEmergencyContactRelationLabel.Location = new Point(275, 302);
+            patientEmergencyContactRelationLabel.Name = "patientEmergencyContactRelationLabel";
+            patientEmergencyContactRelationLabel.Size = new Size(79, 17);
+            patientEmergencyContactRelationLabel.TabIndex = 26;
+            patientEmergencyContactRelationLabel.Text = "Relationship";
             // 
-            // label12
+            // patientEmailAdderssTextBox
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(38, 264);
-            label12.Name = "label12";
-            label12.Size = new Size(192, 17);
-            label12.TabIndex = 19;
-            label12.Text = "Emergency Contact Information";
+            patientEmailAdderssTextBox.Location = new Point(275, 219);
+            patientEmailAdderssTextBox.Name = "patientEmailAdderssTextBox";
+            patientEmailAdderssTextBox.Size = new Size(100, 23);
+            patientEmailAdderssTextBox.TabIndex = 25;
             // 
-            // textBox6
+            // patientEmailLabel
             // 
-            textBox6.Location = new Point(158, 219);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 18;
+            patientEmailLabel.AutoSize = true;
+            patientEmailLabel.Location = new Point(275, 201);
+            patientEmailLabel.Name = "patientEmailLabel";
+            patientEmailLabel.Size = new Size(91, 17);
+            patientEmailLabel.TabIndex = 24;
+            patientEmailLabel.Text = "Email Adderss";
             // 
-            // label9
+            // patientEmergencyContactNumberLabel
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(158, 201);
-            label9.Name = "label9";
-            label9.Size = new Size(104, 17);
-            label9.TabIndex = 17;
-            label9.Text = "Contact Number";
+            patientEmergencyContactNumberLabel.AutoSize = true;
+            patientEmergencyContactNumberLabel.Location = new Point(158, 302);
+            patientEmergencyContactNumberLabel.Name = "patientEmergencyContactNumberLabel";
+            patientEmergencyContactNumberLabel.Size = new Size(104, 17);
+            patientEmergencyContactNumberLabel.TabIndex = 22;
+            patientEmergencyContactNumberLabel.Text = "Contact Number";
             // 
-            // textBox5
+            // patientEmergencyContactNameTextBox
             // 
-            textBox5.Location = new Point(38, 219);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 16;
+            patientEmergencyContactNameTextBox.Location = new Point(38, 320);
+            patientEmergencyContactNameTextBox.Name = "patientEmergencyContactNameTextBox";
+            patientEmergencyContactNameTextBox.Size = new Size(100, 23);
+            patientEmergencyContactNameTextBox.TabIndex = 21;
             // 
-            // label8
+            // patientEmergencyContactNameLabel
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(38, 201);
-            label8.Name = "label8";
-            label8.Size = new Size(56, 17);
-            label8.TabIndex = 15;
-            label8.Text = "Adderss";
+            patientEmergencyContactNameLabel.AutoSize = true;
+            patientEmergencyContactNameLabel.Location = new Point(38, 302);
+            patientEmergencyContactNameLabel.Name = "patientEmergencyContactNameLabel";
+            patientEmergencyContactNameLabel.Size = new Size(43, 17);
+            patientEmergencyContactNameLabel.TabIndex = 20;
+            patientEmergencyContactNameLabel.Text = "Name";
             // 
-            // label7
+            // patientEmergencyContactInformationLabel
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(38, 163);
-            label7.Name = "label7";
-            label7.Size = new Size(124, 17);
-            label7.TabIndex = 14;
-            label7.Text = "Contact Information";
+            patientEmergencyContactInformationLabel.AutoSize = true;
+            patientEmergencyContactInformationLabel.Location = new Point(38, 264);
+            patientEmergencyContactInformationLabel.Name = "patientEmergencyContactInformationLabel";
+            patientEmergencyContactInformationLabel.Size = new Size(192, 17);
+            patientEmergencyContactInformationLabel.TabIndex = 19;
+            patientEmergencyContactInformationLabel.Text = "Emergency Contact Information";
             // 
-            // label6
+            // patientContactNumberLabel
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(160, 86);
-            label6.Name = "label6";
-            label6.Size = new Size(84, 17);
-            label6.TabIndex = 13;
-            label6.Text = "Blood Group";
+            patientContactNumberLabel.AutoSize = true;
+            patientContactNumberLabel.Location = new Point(158, 201);
+            patientContactNumberLabel.Name = "patientContactNumberLabel";
+            patientContactNumberLabel.Size = new Size(104, 17);
+            patientContactNumberLabel.TabIndex = 17;
+            patientContactNumberLabel.Text = "Contact Number";
             // 
-            // textBox1
+            // patientAdderssTextBox
             // 
-            textBox1.Location = new Point(160, 104);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 12;
+            patientAdderssTextBox.Location = new Point(38, 219);
+            patientAdderssTextBox.Name = "patientAdderssTextBox";
+            patientAdderssTextBox.Size = new Size(100, 23);
+            patientAdderssTextBox.TabIndex = 16;
             // 
-            // label1
+            // patientAdderssLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(38, 86);
-            label1.Name = "label1";
-            label1.Size = new Size(31, 17);
-            label1.TabIndex = 11;
-            label1.Text = "Age";
+            patientAdderssLabel.AutoSize = true;
+            patientAdderssLabel.Location = new Point(38, 201);
+            patientAdderssLabel.Name = "patientAdderssLabel";
+            patientAdderssLabel.Size = new Size(56, 17);
+            patientAdderssLabel.TabIndex = 15;
+            patientAdderssLabel.Text = "Adderss";
             // 
-            // comboBox1
+            // contactInformationLabel
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female", "Other" });
-            comboBox1.Location = new Point(343, 35);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 25);
-            comboBox1.TabIndex = 10;
+            contactInformationLabel.AutoSize = true;
+            contactInformationLabel.Location = new Point(38, 163);
+            contactInformationLabel.Name = "contactInformationLabel";
+            contactInformationLabel.Size = new Size(124, 17);
+            contactInformationLabel.TabIndex = 14;
+            contactInformationLabel.Text = "Contact Information";
             // 
-            // textBox4
+            // patientBloodGroupLabel
             // 
-            textBox4.Location = new Point(144, 35);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 7;
+            patientBloodGroupLabel.AutoSize = true;
+            patientBloodGroupLabel.Location = new Point(148, 86);
+            patientBloodGroupLabel.Name = "patientBloodGroupLabel";
+            patientBloodGroupLabel.Size = new Size(84, 17);
+            patientBloodGroupLabel.TabIndex = 13;
+            patientBloodGroupLabel.Text = "Blood Group";
             // 
-            // label4
+            // patientAgeLabel
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(144, 17);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 17);
-            label4.TabIndex = 6;
-            label4.Text = "Last Name";
+            patientAgeLabel.AutoSize = true;
+            patientAgeLabel.Location = new Point(38, 86);
+            patientAgeLabel.Name = "patientAgeLabel";
+            patientAgeLabel.Size = new Size(31, 17);
+            patientAgeLabel.TabIndex = 11;
+            patientAgeLabel.Text = "Age";
             // 
-            // textBox3
+            // patientGenderComboBox
             // 
-            textBox3.Location = new Point(38, 104);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            patientGenderComboBox.FormattingEnabled = true;
+            patientGenderComboBox.Items.AddRange(new object[] { "Male", "Female", "Other" });
+            patientGenderComboBox.Location = new Point(343, 35);
+            patientGenderComboBox.Name = "patientGenderComboBox";
+            patientGenderComboBox.Size = new Size(121, 25);
+            patientGenderComboBox.TabIndex = 10;
             // 
-            // label3
+            // patientLastNameTextBox
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(343, 17);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 17);
-            label3.TabIndex = 4;
-            label3.Text = "Gender";
+            patientLastNameTextBox.Location = new Point(144, 35);
+            patientLastNameTextBox.Name = "patientLastNameTextBox";
+            patientLastNameTextBox.Size = new Size(100, 23);
+            patientLastNameTextBox.TabIndex = 7;
             // 
-            // textBox2
+            // patientLastNameLabel
             // 
-            textBox2.Location = new Point(38, 35);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            patientLastNameLabel.AutoSize = true;
+            patientLastNameLabel.Location = new Point(144, 17);
+            patientLastNameLabel.Name = "patientLastNameLabel";
+            patientLastNameLabel.Size = new Size(70, 17);
+            patientLastNameLabel.TabIndex = 6;
+            patientLastNameLabel.Text = "Last Name";
             // 
-            // label2
+            // patientGenderLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(38, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(71, 17);
-            label2.TabIndex = 2;
-            label2.Text = "First Name";
+            patientGenderLabel.AutoSize = true;
+            patientGenderLabel.Location = new Point(343, 17);
+            patientGenderLabel.Name = "patientGenderLabel";
+            patientGenderLabel.Size = new Size(51, 17);
+            patientGenderLabel.TabIndex = 4;
+            patientGenderLabel.Text = "Gender";
+            // 
+            // patientFirstNameTextBox
+            // 
+            patientFirstNameTextBox.Location = new Point(38, 35);
+            patientFirstNameTextBox.Name = "patientFirstNameTextBox";
+            patientFirstNameTextBox.Size = new Size(100, 23);
+            patientFirstNameTextBox.TabIndex = 3;
+            // 
+            // patientFirstNameLabel
+            // 
+            patientFirstNameLabel.AutoSize = true;
+            patientFirstNameLabel.Location = new Point(38, 17);
+            patientFirstNameLabel.Name = "patientFirstNameLabel";
+            patientFirstNameLabel.Size = new Size(71, 17);
+            patientFirstNameLabel.TabIndex = 2;
+            patientFirstNameLabel.Text = "First Name";
             // 
             // medicalHistoryTabPage
             // 
             medicalHistoryTabPage.BackColor = Color.LightSteelBlue;
+            medicalHistoryTabPage.Controls.Add(AllergiesLable);
             medicalHistoryTabPage.Location = new Point(124, 4);
             medicalHistoryTabPage.Name = "medicalHistoryTabPage";
             medicalHistoryTabPage.Padding = new Padding(3);
             medicalHistoryTabPage.Size = new Size(719, 426);
             medicalHistoryTabPage.TabIndex = 1;
             medicalHistoryTabPage.Text = "Medical History";
+            // 
+            // AllergiesLable
+            // 
+            AllergiesLable.AutoSize = true;
+            AllergiesLable.Location = new Point(87, 53);
+            AllergiesLable.Name = "AllergiesLable";
+            AllergiesLable.Size = new Size(58, 17);
+            AllergiesLable.TabIndex = 0;
+            AllergiesLable.Text = "Allergies";
             // 
             // labHistoryTabPage
             // 
@@ -379,14 +424,56 @@
             labHistoryTabPage.Text = "Lab History";
             labHistoryTabPage.UseVisualStyleBackColor = true;
             // 
-            // radiologyTabPage1
+            // radiologyTabPage
             // 
-            radiologyTabPage1.Location = new Point(124, 4);
-            radiologyTabPage1.Name = "radiologyTabPage1";
-            radiologyTabPage1.Size = new Size(719, 426);
-            radiologyTabPage1.TabIndex = 3;
-            radiologyTabPage1.Text = "Radiology";
-            radiologyTabPage1.UseVisualStyleBackColor = true;
+            radiologyTabPage.BackColor = SystemColors.ActiveCaption;
+            radiologyTabPage.Controls.Add(richTextBox1);
+            radiologyTabPage.Controls.Add(label4);
+            radiologyTabPage.Controls.Add(textBox1);
+            radiologyTabPage.Controls.Add(label3);
+            radiologyTabPage.Controls.Add(dateTimePicker1);
+            radiologyTabPage.Controls.Add(label2);
+            radiologyTabPage.Controls.Add(comboBox1);
+            radiologyTabPage.Controls.Add(label1);
+            radiologyTabPage.Location = new Point(124, 4);
+            radiologyTabPage.Name = "radiologyTabPage";
+            radiologyTabPage.Size = new Size(719, 426);
+            radiologyTabPage.TabIndex = 3;
+            radiologyTabPage.Text = "Radiology";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(50, 163);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(238, 23);
+            dateTimePicker1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(50, 143);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 17);
+            label2.TabIndex = 2;
+            label2.Text = "Date of Imaging";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Standard X-rays", "Fluoroscopy", "CT Angiography (CTA)", "CT Colonography (Virtual Colonoscopy)", "Magnetic Resonance Angiography (MRA)", "Functional MRI (fMRI)", "Diffusion-weighted Imaging (DWI)", "Obstetric Ultrasound", "Doppler Ultrasound", "Positron Emission Tomography (PET)", "Single Photon Emission Computed Tomography (SPECT)", "Barium Swallow", "Barium Enema", "Digital Mammography", "3D Mammography (Tomosynthesis)", "Dual-energy X-ray Absorptiometry", "Angiography", "Embolization", "Transthoracic Echocardiography (TTE)", "Transesophageal Echocardiography (TEE)", "Voiding Cystourethrogram (VCUG)", "Joint Imaging" });
+            comboBox1.Location = new Point(50, 78);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 25);
+            comboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(50, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(88, 17);
+            label1.TabIndex = 0;
+            label1.Text = "Imaging Type";
             // 
             // proceduresTabPage
             // 
@@ -424,13 +511,38 @@
             caseSummaryTabPage.Text = "Case Summary";
             caseSummaryTabPage.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // label3
             // 
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(847, 24);
-            menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
+            label3.AutoSize = true;
+            label3.Location = new Point(50, 218);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 17);
+            label3.TabIndex = 4;
+            label3.Text = "Radiologist";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(50, 238);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(444, 58);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 17);
+            label4.TabIndex = 6;
+            label4.Text = "Findings";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(444, 78);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(254, 82);
+            richTextBox1.TabIndex = 7;
+            richTextBox1.Text = "";
             // 
             // PatientDataEntryForm
             // 
@@ -438,16 +550,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(847, 530);
             Controls.Add(patientDataEntryTabControl);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
             Name = "PatientDataEntryForm";
-            Text = "Form1";
-            Load += PatientDataEntryForm_Load;
+            Text = "Patient Data Entry ";
             patientDataEntryTabControl.ResumeLayout(false);
             patientBiographyTabPage.ResumeLayout(false);
             patientBiographyTabPage.PerformLayout();
+            medicalHistoryTabPage.ResumeLayout(false);
+            medicalHistoryTabPage.PerformLayout();
+            radiologyTabPage.ResumeLayout(false);
+            radiologyTabPage.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -456,38 +568,52 @@
         private TabPage patientBiographyTabPage;
         private TabPage medicalHistoryTabPage;
         private TabPage labHistoryTabPage;
-        private TabPage radiologyTabPage1;
+        private TabPage radiologyTabPage;
         private TabPage proceduresTabPage;
         private TabPage referTabPage;
         private TabPage cunsultentOpinionTabPage;
         private TabPage caseSummaryTabPage;
-        private TextBox textBox4;
-        private Label label4;
+        private TextBox patientLastNameTextBox;
+        private Label patientLastNameLabel;
         private TextBox textBox3;
-        private Label label3;
-        private TextBox textBox2;
-        private Label label2;
+        private Label patientGenderLabel;
+        private TextBox patientFirstNameTextBox;
+        private Label patientFirstNameLabel;
+        private ComboBox patientGenderComboBox;
+        private Label patientBloodGroupLabel;
+        private Label patientAgeLabel;
+        private Label patientContactNumberLabel;
+        private TextBox patientAdderssTextBox;
+        private Label patientAdderssLabel;
+        private Label contactInformationLabel;
+        private TextBox patientEmergencyContactRelationTextBox;
+        private Label patientEmergencyContactRelationLabel;
+        private TextBox patientEmailAdderssTextBox;
+        private Label patientEmailLabel;
+        private Label patientEmergencyContactNumberLabel;
+        private TextBox patientEmergencyContactNameTextBox;
+        private Label patientEmergencyContactNameLabel;
+        private Label patientEmergencyContactInformationLabel;
+        private Button dataSaveButton;
+        private Label CNICLabel;
+        private Label label15;
+        private TextBox textBox12;
         private ComboBox comboBox1;
-        private Label label6;
-        private TextBox textBox1;
+        private MaskedTextBox contactNumberMaskedTextBox;
+        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox patientCNICMaskedTextBox;
+        private MaskedTextBox patientEmergencyContacNumberMaskedTextBox;
+        private TextBox PatientOccupationTextBox;
+        private Label patientOccupationLabel;
+        private ComboBox patientBloodGroupComboBox;
+        private MaskedTextBox maskedTextBox1;
+        private Label AllergiesLable;
         private Label label1;
-        private TextBox textBox6;
-        private Label label9;
-        private TextBox textBox5;
-        private Label label8;
-        private Label label7;
-        private TextBox textBox9;
-        private Label label13;
-        private TextBox textBox10;
-        private Label label14;
-        private TextBox textBox7;
-        private Label label10;
-        private TextBox textBox8;
-        private Label label11;
-        private Label label12;
-        private Button button1;
-        private Label label5;
-        private TextBox textBox11;
-        private MenuStrip menuStrip1;
+        private DateTimePicker dateTimePicker1;
+        private Label label2;
+        private RichTextBox richTextBox1;
+        private Label label4;
+        private TextBox textBox1;
+        private Label label3;
     }
 }

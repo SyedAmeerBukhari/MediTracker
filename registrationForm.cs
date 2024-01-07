@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Ignore Spelling: Medi
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,11 @@ namespace MediTracker
         }
 
         private void registrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
         {
 
         }
