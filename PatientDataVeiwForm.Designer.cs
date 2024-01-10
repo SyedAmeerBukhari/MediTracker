@@ -1,4 +1,6 @@
-﻿namespace MediTracker
+﻿using TabControls;
+
+namespace MediTracker
 {
     partial class PatientDataViewForm
     {
@@ -84,7 +86,7 @@
 
         #endregion
 
-        private TabControls.DotNetBarTabControl patientDataViewTabControl;
+        private DotNetBarTabControl patientDataViewTabControl;
         private TabPage tabPage1;
         private TabPage tabPage2;
     }
