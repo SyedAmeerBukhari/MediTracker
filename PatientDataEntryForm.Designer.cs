@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             patientDataEntryTabControl = new TabControls.DotNetBarTabControl();
-            patientBiographyTabPage = new TabPage();
+            patientBiographyDataEntryTabPage = new TabPage();
             PatientOccupationTextBox = new TextBox();
             patientOccupationLabel = new Label();
             patientBloodGroupComboBox = new ComboBox();
@@ -59,10 +59,14 @@
             patientGenderLabel = new Label();
             patientFirstNameTextBox = new TextBox();
             patientFirstNameLabel = new Label();
-            medicalHistoryTabPage = new TabPage();
+            medicalHistoryDataEntryTabPage = new TabPage();
+            button1 = new Button();
+            textBox2 = new TextBox();
+            allergiesListBox = new ListBox();
             AllergiesLable = new Label();
-            labHistoryTabPage = new TabPage();
-            radiologyTabPage = new TabPage();
+            labHistoryDataEntryTabPage = new TabPage();
+            radiologyDataEntryTabPage = new TabPage();
+            label1 = new Label();
             richTextBox1 = new RichTextBox();
             label4 = new Label();
             textBox1 = new TextBox();
@@ -70,27 +74,26 @@
             dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
             comboBox1 = new ComboBox();
-            proceduresTabPage = new TabPage();
-            referTabPage = new TabPage();
-            cunsultentOpinionTabPage = new TabPage();
-            label1 = new Label();
+            proceduresDataEntryTabPage = new TabPage();
+            referDataEntryTabPage = new TabPage();
+            cunsultentOpinionDataEntryTabPage = new TabPage();
             patientDataEntryTabControl.SuspendLayout();
-            patientBiographyTabPage.SuspendLayout();
-            medicalHistoryTabPage.SuspendLayout();
-            radiologyTabPage.SuspendLayout();
+            patientBiographyDataEntryTabPage.SuspendLayout();
+            medicalHistoryDataEntryTabPage.SuspendLayout();
+            radiologyDataEntryTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // patientDataEntryTabControl
             // 
             patientDataEntryTabControl.Alignment = TabAlignment.Left;
             patientDataEntryTabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            patientDataEntryTabControl.Controls.Add(patientBiographyTabPage);
-            patientDataEntryTabControl.Controls.Add(medicalHistoryTabPage);
-            patientDataEntryTabControl.Controls.Add(labHistoryTabPage);
-            patientDataEntryTabControl.Controls.Add(radiologyTabPage);
-            patientDataEntryTabControl.Controls.Add(proceduresTabPage);
-            patientDataEntryTabControl.Controls.Add(referTabPage);
-            patientDataEntryTabControl.Controls.Add(cunsultentOpinionTabPage);
+            patientDataEntryTabControl.Controls.Add(patientBiographyDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(medicalHistoryDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(labHistoryDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(radiologyDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(proceduresDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(referDataEntryTabPage);
+            patientDataEntryTabControl.Controls.Add(cunsultentOpinionDataEntryTabPage);
             patientDataEntryTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
             patientDataEntryTabControl.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             patientDataEntryTabControl.ItemSize = new Size(44, 136);
@@ -107,46 +110,46 @@
             patientDataEntryTabControl.TabIndex = 0;
             patientDataEntryTabControl.TabStop = false;
             // 
-            // patientBiographyTabPage
+            // patientBiographyDataEntryTabPage
             // 
-            patientBiographyTabPage.BackColor = Color.LightSteelBlue;
-            patientBiographyTabPage.Controls.Add(PatientOccupationTextBox);
-            patientBiographyTabPage.Controls.Add(patientOccupationLabel);
-            patientBiographyTabPage.Controls.Add(patientBloodGroupComboBox);
-            patientBiographyTabPage.Controls.Add(maskedTextBox1);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContacNumberMaskedTextBox);
-            patientBiographyTabPage.Controls.Add(contactNumberMaskedTextBox);
-            patientBiographyTabPage.Controls.Add(patientCNICMaskedTextBox);
-            patientBiographyTabPage.Controls.Add(CNICLabel);
-            patientBiographyTabPage.Controls.Add(dataSaveButton);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactRelationTextBox);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactRelationLabel);
-            patientBiographyTabPage.Controls.Add(patientEmailAdderssTextBox);
-            patientBiographyTabPage.Controls.Add(patientEmailLabel);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactNumberLabel);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactNameTextBox);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactNameLabel);
-            patientBiographyTabPage.Controls.Add(patientEmergencyContactInformationLabel);
-            patientBiographyTabPage.Controls.Add(patientContactNumberLabel);
-            patientBiographyTabPage.Controls.Add(patientAdderssTextBox);
-            patientBiographyTabPage.Controls.Add(patientAdderssLabel);
-            patientBiographyTabPage.Controls.Add(contactInformationLabel);
-            patientBiographyTabPage.Controls.Add(patientBloodGroupLabel);
-            patientBiographyTabPage.Controls.Add(patientAgeLabel);
-            patientBiographyTabPage.Controls.Add(patientGenderComboBox);
-            patientBiographyTabPage.Controls.Add(patientLastNameTextBox);
-            patientBiographyTabPage.Controls.Add(patientLastNameLabel);
-            patientBiographyTabPage.Controls.Add(patientGenderLabel);
-            patientBiographyTabPage.Controls.Add(patientFirstNameTextBox);
-            patientBiographyTabPage.Controls.Add(patientFirstNameLabel);
-            patientBiographyTabPage.ForeColor = Color.Black;
-            patientBiographyTabPage.ImeMode = ImeMode.NoControl;
-            patientBiographyTabPage.Location = new Point(140, 4);
-            patientBiographyTabPage.Name = "patientBiographyTabPage";
-            patientBiographyTabPage.Padding = new Padding(3);
-            patientBiographyTabPage.Size = new Size(706, 450);
-            patientBiographyTabPage.TabIndex = 0;
-            patientBiographyTabPage.Text = "Patient Biography";
+            patientBiographyDataEntryTabPage.BackColor = SystemColors.Control;
+            patientBiographyDataEntryTabPage.Controls.Add(PatientOccupationTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientOccupationLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientBloodGroupComboBox);
+            patientBiographyDataEntryTabPage.Controls.Add(maskedTextBox1);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContacNumberMaskedTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(contactNumberMaskedTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientCNICMaskedTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(CNICLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(dataSaveButton);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactRelationTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactRelationLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmailAdderssTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmailLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactNumberLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactNameTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactNameLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientEmergencyContactInformationLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientContactNumberLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientAdderssTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientAdderssLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(contactInformationLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientBloodGroupLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientAgeLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientGenderComboBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientLastNameTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientLastNameLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientGenderLabel);
+            patientBiographyDataEntryTabPage.Controls.Add(patientFirstNameTextBox);
+            patientBiographyDataEntryTabPage.Controls.Add(patientFirstNameLabel);
+            patientBiographyDataEntryTabPage.ForeColor = Color.Black;
+            patientBiographyDataEntryTabPage.ImeMode = ImeMode.NoControl;
+            patientBiographyDataEntryTabPage.Location = new Point(140, 4);
+            patientBiographyDataEntryTabPage.Name = "patientBiographyDataEntryTabPage";
+            patientBiographyDataEntryTabPage.Padding = new Padding(3);
+            patientBiographyDataEntryTabPage.Size = new Size(706, 450);
+            patientBiographyDataEntryTabPage.TabIndex = 0;
+            patientBiographyDataEntryTabPage.Text = "Patient Biography";
             // 
             // PatientOccupationTextBox
             // 
@@ -392,16 +395,45 @@
             patientFirstNameLabel.TabIndex = 2;
             patientFirstNameLabel.Text = "First Name";
             // 
-            // medicalHistoryTabPage
+            // medicalHistoryDataEntryTabPage
             // 
-            medicalHistoryTabPage.BackColor = Color.LightSteelBlue;
-            medicalHistoryTabPage.Controls.Add(AllergiesLable);
-            medicalHistoryTabPage.Location = new Point(140, 4);
-            medicalHistoryTabPage.Name = "medicalHistoryTabPage";
-            medicalHistoryTabPage.Padding = new Padding(3);
-            medicalHistoryTabPage.Size = new Size(706, 450);
-            medicalHistoryTabPage.TabIndex = 1;
-            medicalHistoryTabPage.Text = "Medical History";
+            medicalHistoryDataEntryTabPage.BackColor = SystemColors.Control;
+            medicalHistoryDataEntryTabPage.Controls.Add(button1);
+            medicalHistoryDataEntryTabPage.Controls.Add(textBox2);
+            medicalHistoryDataEntryTabPage.Controls.Add(allergiesListBox);
+            medicalHistoryDataEntryTabPage.Controls.Add(AllergiesLable);
+            medicalHistoryDataEntryTabPage.Location = new Point(140, 4);
+            medicalHistoryDataEntryTabPage.Name = "medicalHistoryDataEntryTabPage";
+            medicalHistoryDataEntryTabPage.Padding = new Padding(3);
+            medicalHistoryDataEntryTabPage.Size = new Size(706, 450);
+            medicalHistoryDataEntryTabPage.TabIndex = 1;
+            medicalHistoryDataEntryTabPage.Text = "Medical History";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(315, 37);
+            button1.Name = "button1";
+            button1.Size = new Size(115, 36);
+            button1.TabIndex = 3;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(120, 44);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(189, 23);
+            textBox2.TabIndex = 2;
+            // 
+            // allergiesListBox
+            // 
+            allergiesListBox.BackColor = SystemColors.Control;
+            allergiesListBox.FormattingEnabled = true;
+            allergiesListBox.ItemHeight = 17;
+            allergiesListBox.Location = new Point(56, 73);
+            allergiesListBox.Name = "allergiesListBox";
+            allergiesListBox.Size = new Size(253, 106);
+            allergiesListBox.TabIndex = 1;
             // 
             // AllergiesLable
             // 
@@ -412,31 +444,40 @@
             AllergiesLable.TabIndex = 0;
             AllergiesLable.Text = "Allergies";
             // 
-            // labHistoryTabPage
+            // labHistoryDataEntryTabPage
             // 
-            labHistoryTabPage.Location = new Point(140, 4);
-            labHistoryTabPage.Name = "labHistoryTabPage";
-            labHistoryTabPage.Size = new Size(706, 450);
-            labHistoryTabPage.TabIndex = 2;
-            labHistoryTabPage.Text = "Lab History";
-            labHistoryTabPage.UseVisualStyleBackColor = true;
+            labHistoryDataEntryTabPage.BackColor = SystemColors.Control;
+            labHistoryDataEntryTabPage.Location = new Point(140, 4);
+            labHistoryDataEntryTabPage.Name = "labHistoryDataEntryTabPage";
+            labHistoryDataEntryTabPage.Size = new Size(706, 450);
+            labHistoryDataEntryTabPage.TabIndex = 2;
+            labHistoryDataEntryTabPage.Text = "Lab History";
             // 
-            // radiologyTabPage
+            // radiologyDataEntryTabPage
             // 
-            radiologyTabPage.BackColor = SystemColors.ActiveCaption;
-            radiologyTabPage.Controls.Add(label1);
-            radiologyTabPage.Controls.Add(richTextBox1);
-            radiologyTabPage.Controls.Add(label4);
-            radiologyTabPage.Controls.Add(textBox1);
-            radiologyTabPage.Controls.Add(label3);
-            radiologyTabPage.Controls.Add(dateTimePicker1);
-            radiologyTabPage.Controls.Add(label2);
-            radiologyTabPage.Controls.Add(comboBox1);
-            radiologyTabPage.Location = new Point(140, 4);
-            radiologyTabPage.Name = "radiologyTabPage";
-            radiologyTabPage.Size = new Size(706, 450);
-            radiologyTabPage.TabIndex = 3;
-            radiologyTabPage.Text = "Radiology";
+            radiologyDataEntryTabPage.BackColor = SystemColors.Control;
+            radiologyDataEntryTabPage.Controls.Add(label1);
+            radiologyDataEntryTabPage.Controls.Add(richTextBox1);
+            radiologyDataEntryTabPage.Controls.Add(label4);
+            radiologyDataEntryTabPage.Controls.Add(textBox1);
+            radiologyDataEntryTabPage.Controls.Add(label3);
+            radiologyDataEntryTabPage.Controls.Add(dateTimePicker1);
+            radiologyDataEntryTabPage.Controls.Add(label2);
+            radiologyDataEntryTabPage.Controls.Add(comboBox1);
+            radiologyDataEntryTabPage.Location = new Point(140, 4);
+            radiologyDataEntryTabPage.Name = "radiologyDataEntryTabPage";
+            radiologyDataEntryTabPage.Size = new Size(706, 450);
+            radiologyDataEntryTabPage.TabIndex = 3;
+            radiologyDataEntryTabPage.Text = "Radiology";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(50, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(88, 17);
+            label1.TabIndex = 0;
+            label1.Text = "Imaging Type";
             // 
             // richTextBox1
             // 
@@ -496,70 +537,62 @@
             comboBox1.Size = new Size(121, 25);
             comboBox1.TabIndex = 1;
             // 
-            // proceduresTabPage
+            // proceduresDataEntryTabPage
             // 
-            proceduresTabPage.Location = new Point(140, 4);
-            proceduresTabPage.Name = "proceduresTabPage";
-            proceduresTabPage.Size = new Size(706, 450);
-            proceduresTabPage.TabIndex = 4;
-            proceduresTabPage.Text = "Procedures / Surgury";
-            proceduresTabPage.UseVisualStyleBackColor = true;
+            proceduresDataEntryTabPage.BackColor = SystemColors.Control;
+            proceduresDataEntryTabPage.Location = new Point(140, 4);
+            proceduresDataEntryTabPage.Name = "proceduresDataEntryTabPage";
+            proceduresDataEntryTabPage.Size = new Size(706, 450);
+            proceduresDataEntryTabPage.TabIndex = 4;
+            proceduresDataEntryTabPage.Text = "Procedures / Surgury";
             // 
-            // referTabPage
+            // referDataEntryTabPage
             // 
-            referTabPage.Location = new Point(140, 4);
-            referTabPage.Name = "referTabPage";
-            referTabPage.Size = new Size(706, 450);
-            referTabPage.TabIndex = 5;
-            referTabPage.Text = "Refer";
-            referTabPage.UseVisualStyleBackColor = true;
+            referDataEntryTabPage.BackColor = SystemColors.Control;
+            referDataEntryTabPage.Location = new Point(140, 4);
+            referDataEntryTabPage.Name = "referDataEntryTabPage";
+            referDataEntryTabPage.Size = new Size(706, 450);
+            referDataEntryTabPage.TabIndex = 5;
+            referDataEntryTabPage.Text = "Refer";
             // 
-            // cunsultentOpinionTabPage
+            // cunsultentOpinionDataEntryTabPage
             // 
-            cunsultentOpinionTabPage.Location = new Point(140, 4);
-            cunsultentOpinionTabPage.Name = "cunsultentOpinionTabPage";
-            cunsultentOpinionTabPage.Size = new Size(706, 450);
-            cunsultentOpinionTabPage.TabIndex = 6;
-            cunsultentOpinionTabPage.Text = "Cunsultent Opinion";
-            cunsultentOpinionTabPage.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(50, 58);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 17);
-            label1.TabIndex = 0;
-            label1.Text = "Imaging Type";
+            cunsultentOpinionDataEntryTabPage.BackColor = SystemColors.Control;
+            cunsultentOpinionDataEntryTabPage.Location = new Point(140, 4);
+            cunsultentOpinionDataEntryTabPage.Name = "cunsultentOpinionDataEntryTabPage";
+            cunsultentOpinionDataEntryTabPage.Size = new Size(706, 450);
+            cunsultentOpinionDataEntryTabPage.TabIndex = 6;
+            cunsultentOpinionDataEntryTabPage.Text = "Cunsultent Opinion";
             // 
             // PatientDataEntryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(847, 530);
             Controls.Add(patientDataEntryTabControl);
             Name = "PatientDataEntryForm";
             Text = "Patient Data Entry ";
             patientDataEntryTabControl.ResumeLayout(false);
-            patientBiographyTabPage.ResumeLayout(false);
-            patientBiographyTabPage.PerformLayout();
-            medicalHistoryTabPage.ResumeLayout(false);
-            medicalHistoryTabPage.PerformLayout();
-            radiologyTabPage.ResumeLayout(false);
-            radiologyTabPage.PerformLayout();
+            patientBiographyDataEntryTabPage.ResumeLayout(false);
+            patientBiographyDataEntryTabPage.PerformLayout();
+            medicalHistoryDataEntryTabPage.ResumeLayout(false);
+            medicalHistoryDataEntryTabPage.PerformLayout();
+            radiologyDataEntryTabPage.ResumeLayout(false);
+            radiologyDataEntryTabPage.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private TabControls.DotNetBarTabControl patientDataEntryTabControl;
-        private TabPage patientBiographyTabPage;
-        private TabPage medicalHistoryTabPage;
-        private TabPage labHistoryTabPage;
-        private TabPage radiologyTabPage;
-        private TabPage proceduresTabPage;
-        private TabPage referTabPage;
-        private TabPage cunsultentOpinionTabPage;
+        private TabPage patientBiographyDataEntryTabPage;
+        private TabPage medicalHistoryDataEntryTabPage;
+        private TabPage labHistoryDataEntryTabPage;
+        private TabPage radiologyDataEntryTabPage;
+        private TabPage proceduresDataEntryTabPage;
+        private TabPage referDataEntryTabPage;
+        private TabPage cunsultentOpinionDataEntryTabPage;
         private TextBox patientLastNameTextBox;
         private Label patientLastNameLabel;
         private TextBox textBox3;
@@ -602,5 +635,8 @@
         private Label label4;
         private TextBox textBox1;
         private Label label3;
+        private ListBox allergiesListBox;
+        private Button button1;
+        private TextBox textBox2;
     }
 }

@@ -45,7 +45,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(812, 100);
+            panel1.Size = new Size(864, 100);
             panel1.TabIndex = 0;
             // 
             // exisitingPatientdataGridView
@@ -54,10 +54,11 @@
             exisitingPatientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             exisitingPatientdataGridView.Columns.AddRange(new DataGridViewColumn[] { patentIdColumnReadTextBox, patientFullNameColumnReadTextBox, lastVisitColumnReadTextBox, viewDetailsColumnButton });
             exisitingPatientdataGridView.Dock = DockStyle.Bottom;
-            exisitingPatientdataGridView.Location = new Point(0, 243);
+            exisitingPatientdataGridView.Location = new Point(0, 226);
             exisitingPatientdataGridView.Name = "exisitingPatientdataGridView";
-            exisitingPatientdataGridView.Size = new Size(812, 223);
+            exisitingPatientdataGridView.Size = new Size(864, 223);
             exisitingPatientdataGridView.TabIndex = 1;
+            exisitingPatientdataGridView.CellContentClick += exisitingPatientdataGridView_CellContentClick_1;
             // 
             // patentIdColumnReadTextBox
             // 
@@ -115,7 +116,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(812, 466);
+            ClientSize = new Size(864, 449);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(newPatentEntryButton);

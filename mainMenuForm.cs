@@ -36,5 +36,11 @@ namespace MediTracker
             PatientDataEntryForm patientDataEntryForm = new PatientDataEntryForm();
             patientDataEntryForm.Show();
         }
+
+        private void exisitingPatientdataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            PatientDataViewForm patientDataViewForm1 = new PatientDataViewForm();
+            patientDataViewForm1.Show();
+        }
     }
 }

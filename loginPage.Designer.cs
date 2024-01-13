@@ -31,13 +31,14 @@
             panel1 = new Panel();
             loginLogoPictureBox = new PictureBox();
             loginButton = new Button();
-            userNameTextBox = new TextBox();
-            passwordTextBox = new TextBox();
+            loginUserNameTextBox = new TextBox();
+            loginPasswordTextBox = new TextBox();
             loginUserNameLabel = new Label();
             loginPaswordLabel = new Label();
             loginHeaderLabel = new Label();
             RegisterNowLinkLabel = new LinkLabel();
             questionLabel = new Label();
+            invalidCredentialsLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)loginLogoPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             // loginButton
             // 
             loginButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            loginButton.Location = new Point(549, 272);
+            loginButton.Location = new Point(549, 335);
             loginButton.Name = "loginButton";
             loginButton.Size = new Size(79, 25);
             loginButton.TabIndex = 3;
@@ -73,21 +74,21 @@
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += loginButton_Click;
             // 
-            // userNameTextBox
+            // loginUserNameTextBox
             // 
-            userNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            userNameTextBox.Location = new Point(458, 174);
-            userNameTextBox.Name = "userNameTextBox";
-            userNameTextBox.Size = new Size(228, 23);
-            userNameTextBox.TabIndex = 4;
+            loginUserNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginUserNameTextBox.Location = new Point(458, 174);
+            loginUserNameTextBox.Name = "loginUserNameTextBox";
+            loginUserNameTextBox.Size = new Size(228, 23);
+            loginUserNameTextBox.TabIndex = 4;
             // 
-            // passwordTextBox
+            // loginPasswordTextBox
             // 
-            passwordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            passwordTextBox.Location = new Point(458, 233);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(228, 23);
-            passwordTextBox.TabIndex = 5;
+            loginPasswordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginPasswordTextBox.Location = new Point(458, 233);
+            loginPasswordTextBox.Name = "loginPasswordTextBox";
+            loginPasswordTextBox.Size = new Size(228, 23);
+            loginPasswordTextBox.TabIndex = 5;
             // 
             // loginUserNameLabel
             // 
@@ -124,7 +125,7 @@
             RegisterNowLinkLabel.ActiveLinkColor = Color.Red;
             RegisterNowLinkLabel.Anchor = AnchorStyles.None;
             RegisterNowLinkLabel.AutoSize = true;
-            RegisterNowLinkLabel.Location = new Point(584, 310);
+            RegisterNowLinkLabel.Location = new Point(584, 373);
             RegisterNowLinkLabel.Name = "RegisterNowLinkLabel";
             RegisterNowLinkLabel.Size = new Size(77, 15);
             RegisterNowLinkLabel.TabIndex = 9;
@@ -136,11 +137,22 @@
             // 
             questionLabel.Anchor = AnchorStyles.None;
             questionLabel.AutoSize = true;
-            questionLabel.Location = new Point(454, 311);
+            questionLabel.Location = new Point(454, 374);
             questionLabel.Name = "questionLabel";
             questionLabel.Size = new Size(126, 15);
             questionLabel.TabIndex = 10;
             questionLabel.Text = "Don't have a Account?";
+            // 
+            // invalidCredentialsLabel
+            // 
+            invalidCredentialsLabel.AutoSize = true;
+            invalidCredentialsLabel.ForeColor = Color.Red;
+            invalidCredentialsLabel.Location = new Point(458, 259);
+            invalidCredentialsLabel.Name = "invalidCredentialsLabel";
+            invalidCredentialsLabel.Size = new Size(164, 15);
+            invalidCredentialsLabel.TabIndex = 11;
+            invalidCredentialsLabel.Text = "Invalid username or password";
+            invalidCredentialsLabel.Visible = false;
             // 
             // loginPage
             // 
@@ -148,14 +160,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(816, 418);
+            Controls.Add(invalidCredentialsLabel);
             Controls.Add(loginButton);
             Controls.Add(questionLabel);
             Controls.Add(RegisterNowLinkLabel);
             Controls.Add(loginHeaderLabel);
             Controls.Add(loginPaswordLabel);
             Controls.Add(loginUserNameLabel);
-            Controls.Add(passwordTextBox);
-            Controls.Add(userNameTextBox);
+            Controls.Add(loginPasswordTextBox);
+            Controls.Add(loginUserNameTextBox);
             Controls.Add(loginLogoPictureBox);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -172,12 +185,13 @@
         private Panel panel1;
         private PictureBox loginLogoPictureBox;
         private Button loginButton;
-        private TextBox userNameTextBox;
-        private TextBox passwordTextBox;
+        private TextBox loginUserNameTextBox;
+        private TextBox loginPasswordTextBox;
         private Label loginUserNameLabel;
         private Label loginPaswordLabel;
         private Label loginHeaderLabel;
         private LinkLabel RegisterNowLinkLabel;
         private Label questionLabel;
+        private Label invalidCredentialsLabel;
     }
 }

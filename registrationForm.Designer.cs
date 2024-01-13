@@ -38,6 +38,8 @@
             confirmPasswordLable = new Label();
             confirmPasswordTextBox = new TextBox();
             registerButton = new Button();
+            unMatchPaswordLable = new Label();
+            successLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)registerLogoPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             // 
             registerUserNameTextBox.Location = new Point(425, 223);
             registerUserNameTextBox.Name = "registerUserNameTextBox";
-            registerUserNameTextBox.Size = new Size(162, 23);
+            registerUserNameTextBox.Size = new Size(275, 23);
             registerUserNameTextBox.TabIndex = 7;
             // 
             // registerPasswordLable
@@ -101,8 +103,9 @@
             // 
             registerpasswordTextBox.Location = new Point(425, 294);
             registerpasswordTextBox.Name = "registerpasswordTextBox";
-            registerpasswordTextBox.Size = new Size(162, 23);
+            registerpasswordTextBox.Size = new Size(275, 23);
             registerpasswordTextBox.TabIndex = 13;
+            registerpasswordTextBox.TextChanged += registerpasswordTextBox_TextChanged;
             // 
             // confirmPasswordLable
             // 
@@ -117,8 +120,9 @@
             // 
             confirmPasswordTextBox.Location = new Point(425, 360);
             confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            confirmPasswordTextBox.Size = new Size(162, 23);
+            confirmPasswordTextBox.Size = new Size(275, 23);
             confirmPasswordTextBox.TabIndex = 15;
+            confirmPasswordTextBox.TextChanged += confirmPasswordTextBox_TextChanged;
             // 
             // registerButton
             // 
@@ -131,12 +135,36 @@
             registerButton.UseVisualStyleBackColor = true;
             registerButton.Click += registerButton_Click;
             // 
+            // unMatchPaswordLable
+            // 
+            unMatchPaswordLable.AutoSize = true;
+            unMatchPaswordLable.ForeColor = Color.Red;
+            unMatchPaswordLable.Location = new Point(425, 386);
+            unMatchPaswordLable.Name = "unMatchPaswordLable";
+            unMatchPaswordLable.Size = new Size(146, 15);
+            unMatchPaswordLable.TabIndex = 18;
+            unMatchPaswordLable.Text = "Password Does Not Match";
+            unMatchPaswordLable.Visible = false;
+            // 
+            // successLabel
+            // 
+            successLabel.AutoSize = true;
+            successLabel.ForeColor = Color.Green;
+            successLabel.Location = new Point(425, 386);
+            successLabel.Name = "successLabel";
+            successLabel.Size = new Size(94, 15);
+            successLabel.TabIndex = 19;
+            successLabel.Text = "Password Match";
+            successLabel.Visible = false;
+            // 
             // registrationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(211, 197, 187);
             ClientSize = new Size(837, 494);
+            Controls.Add(successLabel);
+            Controls.Add(unMatchPaswordLable);
             Controls.Add(registerButton);
             Controls.Add(confirmPasswordLable);
             Controls.Add(confirmPasswordTextBox);
@@ -168,5 +196,7 @@
         private Label confirmPasswordLable;
         private TextBox confirmPasswordTextBox;
         private Button registerButton;
+        private Label unMatchPaswordLable;
+        private Label successLabel;
     }
 }
